@@ -1,0 +1,334 @@
+* {
+    user-select:none;
+    transition:1.5s;
+    font-weight:bold;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /* background:rgb(225,0,0); */
+}
+
+.container{
+    background:linear-gradient(to bottom,white,rgba(0,0,0,0.1));
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-x:hidden;
+    overflow-y:scrollx;
+}
+
+.container .loader{
+    display:block;
+}
+
+.container .loader progress{
+    width:90vw;
+    height:2em;
+    background:rgb(225,225,225);
+    border-radius:2rem;
+    margin-top:50%;
+    display:block;
+}
+
+
+
+.container .loader progress[value]{
+    background:rgb(225,225,225,);
+    border-radius:2rem;
+    box-shadow:0px 3px 3px rgb(225,225,225) inset;
+}
+
+.container .loader progress[value]::-webkit-progress-bar{
+     background:rgb(225,225,225);
+     border-radius:2rem;
+     box-shadow:0px 3px 3px rgb(225,225,225) inset;
+}
+.container .loader progress[value]::-webkit-progress-value{
+    background:linear-gradient(to right,#00235d,#0ae6f4);
+    border-radius:2rem;
+    box-shadow:0px -3px 3px rgb(225,225,225) inset;
+}
+
+
+.container .loading{
+    width:100%;
+    text-align:center;
+    margin-bottom:1%;
+    
+    font-size:2rem;
+    color:#00235d;
+    display:block;
+}
+
+#home{
+    justify-content:center;
+    align-items:center;
+    display:none;
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;   
+}
+
+#home .menu{
+    width:5rem;
+    height:2.5rem;
+    background:linear-gradient(to right,#00235d,#0ae6f4);
+    position:fixed;
+    top:2%;
+    left:2%;
+    z-index:3;
+    border-radius:2rem;
+    box-shadow:0 -3px 3px  #0ae6f4 inset;
+    
+}
+
+
+
+#home .menu .menu_divs_container{
+    
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:2rem;
+
+}
+
+#home .menu .menu_divs_container *{
+    width:50%;
+    margin-left:25%;
+    height:10%;
+    margin-top:7.95%;
+    background:white;
+    border-radius:2rem;
+    
+}
+
+
+#home .side_bar{
+    width:30vw;
+    height:90vh;
+    position:fixed;
+    top:8.5%;
+    left:-29.75vw;
+    background:rgba(207, 97, 235,0.95);
+    border-top-right-radius:1.2rem;
+    border-bottom-right-radius:1.2rem;
+    z-index:5;
+
+}
+
+
+#home .side_bar .side_bar_elements_container{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;  
+}
+
+#home .side_bar .side_bar_elements_container div {
+    width:85%;
+    height:10%;
+    margin-top:5%;
+    margin-left:7.5%;
+    background:white;
+    border-radius:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 -3px 3px #0ae6f4 inset;
+}
+
+#home .side_bar .side_bar_elements_container div a,div>b{
+    text-decoration:none;
+    color:rgba(207, 97, 235,0.95);
+    font-size:1.9em;
+}
+
+#home .side_bar .side_bar_elements_container div a:hover{
+    color:#00235d;
+}
+
+#home .side_bar .side_bar_elements_container div b:hover{
+    color:#00235d;
+}
+
+
+
+#home .side_bar .side_bar_elements_container div strong{
+    width:64%;
+    height:20%;
+    background:white;
+    border-bottom-left-radius:2rem;
+    border-bottom-right-radius:2rem;
+    position:absolute;
+    left:17.5%;
+    top:22.5%;
+    display:none;
+    opacity:0;
+
+}
+
+
+#home .side_bar .side_bar_elements_container div strong b{
+    color:rgba(207, 97, 235,0.95);
+    width:100%;
+    text-align:center;
+    display:block;
+    
+
+}
+
+
+#home .avatar{
+    width:48rem;
+    height:36rem;
+    margin-top:8.5%;
+    background:linear-gradient(to bottom,white,rgba(0,0,0,0.01));
+    box-shadow:0 3px 3px 1px rgba(0,0,0,0.11);
+    border-radius:2.5rem;
+    border-left:3px solid #00235d;
+    border-top:3px solid #00235d;
+    border-right:3px solid #00235d;
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    
+}
+
+#home .avatar *{
+    position:absolute;
+}
+
+
+#home img{
+    width:10.75%;
+    border: 7.5px solid white;
+    border-radius:50%;
+    top:11.5%;
+    left:16%;
+    display:block;
+    z-index:2;
+   
+}
+
+#home h1{
+    background:linear-gradient(to right,#00235d,#0ae6f4);
+    position:absolute;
+    top:11%;
+    left:33.5%;
+    width:35vw;
+    height:10vh;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:2rem;
+    border:7.5px solid white;
+    color:white;
+    z-index:2;
+
+}
+
+#home .about_note{
+    width:43rem;
+    height:33rem;
+    margin-top:8.5%;
+    background:rgba(0,0,0,0.05);
+    z-index:1;
+    border-radius:2.5rem;
+    margin:0 0 1.25%; 
+    border:7.5px solid white;
+    color:#00235d;
+    font-size:1.5em;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    text-align:left;
+    line-height:1.5;
+}
+
+#home .about_note .line{
+    width:100%;
+    height:0.1em;
+}
+
+#home .about_note .line div{
+    background:#00235d;
+    width:15%;
+    height:100%;
+    margin-left:42.5%;
+}
+
+#home .big_text{
+    text-align:center;
+    
+}
+
+#home  .btn{
+    width:9.5vw;
+    height:5vw;
+    position:absolute;
+    top:99vh;
+    left:45.25vw;
+    z-index:4;
+    border-radius:2rem;
+    background:linear-gradient(to right,rgb(209, 207, 207),rgb(240, 240, 240));
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    color:#00235d;
+    box-shadow:0 -3px 3px #0ae6f4 inset;
+    text-decoration:none;
+
+}
+
+#home .btn:hover{
+    background:linear-gradient(to right,#00235d,#0ae6f4);
+    color:white;
+    box-shadow:0 -3px 3px white inset;
+}
+
+#home  .message_me{
+    width:20.5vw;
+    height:2.5vw;
+    position:fixed;
+    top:90%;
+    left:0;
+    z-index:4;
+    border-top-right-radius:.75rem;
+    background:white;
+    box-shadow:0 -3px 3px rgba(0,0,0,0.01);
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    color:#00235d;
+    padding-bottom: 30%;   
+    text-align:center;
+    animation-name:blink;
+    animation-duration:5s;
+    animation-iteration-count:10;
+    text-decoration:none;
+}
+
+@keyframes blink{
+    from{background:linear-gradient(to right,#0ae6f4,white);
+        color:white;}
+    to{background:white;
+        color:linear-gradient(to right,#0ae6f4,white);}
+}
